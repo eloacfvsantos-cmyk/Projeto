@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: #1f2937;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+.calculator {
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #6b7280;
+
+    margin-bottom: 30px;
+
+    line-height: 1.5;
+}
+
+/* NOTAS */
+
+#notasContainer {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.nota-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.nota-item label {
+    width: 70px;
+
+    font-weight: bold;
+
+    color: #374151;
+}
+
+.nota {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 2px solid #d1d5db;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.nota:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.btn-remover {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-remover:hover {
+    background: #fecaca;
+
+    transform: scale(1.05);
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.adicionar {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+.adicionar:hover {
+    background: #bfdbfe;
+}
+
+.calcular {
+    background: #2563eb;
+
+    color: white;
+}
+
+.calcular:hover {
+    background: #1d4ed8;
+}
+
+.limpar {
+    background: #f3f4f6;
+
+    color: #374151;
+}
+
+.limpar:hover {
+    background: #e5e7eb;
+}
+
+/* RESULTADO */
+
+.resultado {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    background: #f3f4f6;
+
+    transition: 0.3s;
+}
+
+.resultado-titulo {
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+.media {
+    font-size: 42px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.status {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+/* CORES DOS RESULTADOS */
+
+.aprovado {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+.recuperacao {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+.reprovado {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 500px) {
+
+    .calculator {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .nota-item label {
+        width: 60px;
+
+        font-size: 14px;
+    }
+
+    .nota {
+        min-width: 0;
+    }
+
+}
